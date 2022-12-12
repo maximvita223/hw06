@@ -22,7 +22,7 @@ public class mainNote {
         Notebooks Laptop13 = new Notebooks("Lenovo", 16, 256, "Win", "Black", 730);
         Notebooks Laptop14 = new Notebooks("Lenovo", 16, 256, "Win", "White", 730);
         Notebooks Laptop15 = new Notebooks("Lenovo", 16, 512, "Win", "Black", 915);
-        // System.out.println(Laptop15);
+        
     }
 
     public static void userRequest() {
@@ -70,7 +70,7 @@ public class mainNote {
                 break;
         }
         req.put("cache", x);
-       
+
         System.out.println("Операционная система : " + "\n" + "Windows  - 1"
                 + "\n" + "Mac Os  - 2" + "\n" + "Without OS  - 3");
         String userInput3 = request.nextLine();
@@ -88,32 +88,32 @@ public class mainNote {
                 break;
         }
         req.put("os", x);
-        // 4 - Цвет … ");
 
         System.out.println("Цвет : " + "\n" + "Черный  - 1"
-        + "\n" + "Белый  - 2" + "\n" + "Серебрянный  - 3");
-String userInput4 = request.nextLine();
-switch (userInput4) {
-    case "1":
-        x = 1;
-        break;
-    case "2":
-        x = 2;
-        break;
-    case "3":
-        x = 3;
-        break;
-    default:
-        break;
-}
-req.put("color", x);
+                + "\n" + "Белый  - 2" + "\n" + "Серебрянный  - 3");
+        String userInput4 = request.nextLine();
+        switch (userInput4) {
+            case "1":
+                x = 1;
+                break;
+            case "2":
+                x = 2;
+                break;
+            case "3":
+                x = 3;
+                break;
+            default:
+                break;
+        }
+        req.put("color", x);
 
-System.out.println("Введите максимальную цену : ");
-String maxPrice = request.nextLine();
 
         System.out.println(req.get("memory"));
         System.out.println(req.get("cache"));
         System.out.println(req.get("os"));
-        System.out.println(maxPrice);
+        System.out.println(req.get("color"));
+        request.close();
     }
+
+
 }
